@@ -10,14 +10,17 @@ handlers:
 - url: /data
   static_dir: data
 
-- url: /elements
-  static_dir: elements
-
 - url: /guides
   static_dir: guides
 
 - url: /styles
   static_dir: styles
+
+- url: /elements/fort-.*
+  script: /index.html
+
+- url: /elements
+  static_dir: elements
 
 - url: /images
   static_dir: images
