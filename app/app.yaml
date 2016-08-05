@@ -4,10 +4,27 @@ runtime: php55
 api_version: 1
 
 handlers:
-- url: /
-  static_files: index.html
-  upload: index.html
+- url: /bower_components
+  static_dir: bower_components
 
-- url: /(.+)
-  static_files: \1
-  upload: (.*)
+- url: /data
+  static_dir: data
+
+- url: /elements
+  static_dir: elements
+
+- url: /guides
+  static_dir: guides
+
+- url: /styles
+  static_dir: styles
+
+- url: /images
+  static_dir: images
+
+- url: /catalog.json
+  static_files: catalog.json
+  upload: catalog.json
+
+- url: /.*
+  script: /index.html
